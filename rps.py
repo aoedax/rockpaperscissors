@@ -3,10 +3,10 @@ import random
 user_wins = 0
 computer_wins = 0
 
-options = ["rock", "paper", "scissors"]
+options = ["r", "p", "s"]
 
 while True:
-    user_input = input("Type Rock/Paper/Scissors or Q to quit: ").lower()
+    user_input = input("Type R for Rock/ P for Paper/ S for Scissors or Q to quit: ").lower()
     if user_input == "q":
         break
 
@@ -18,16 +18,16 @@ while True:
     computer_pick = options[random_number]
     print("Computer picked", computer_pick + ".")
 
-    if user_input == "rock" and computer_pick == "scissors":
+    if user_input == "r" and computer_pick == "s":
         print("You won!")
         user_wins += 1
         continue
 
-    elif user_input == "paper" and computer_pick == "rock":
+    elif user_input == "p" and computer_pick == "r":
         print("You won")
         user_wins += 1
 
-    elif user_input == "scissors" and computer_pick == "paper":
+    elif user_input == "s" and computer_pick == "p":
         print("You won!")
         user_wins += 1
 
@@ -38,5 +38,3 @@ while True:
 print("You won", user_wins, "times.")
 print("Computer won", computer_wins, "times.")
 print("Goodbye!")
-
-
